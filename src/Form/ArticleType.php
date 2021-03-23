@@ -18,7 +18,11 @@ class ArticleType extends AbstractType
     {
 
         $builder
-        ->add('title')
+        
+        ->add('title', null, [
+            'help' => "Le titre de l'article, utilisé dans l'url",
+        ])
+        
         ->add('content', TextareaType::class)
         ->add('author', TextType::class)
         ;
